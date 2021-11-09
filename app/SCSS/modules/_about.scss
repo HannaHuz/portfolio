@@ -1,0 +1,63 @@
+.about {
+  .animate {
+    opacity: 0;
+    transform: scale(1.2)
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .animate {
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+  }
+
+  .animate-transition {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  &__content {
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__content-info {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 25px;
+    color: $color-thunder;
+
+    @include respond-to(tablet-portrait) {
+      margin-top: 30px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 20px;
+      line-height: 33px;
+    }
+
+    &_dark {
+      color: $color-pink;
+      margin: 50px 0;
+    }
+  }
+
+  &__btn {
+    max-width: fit-content;
+    margin: 0 auto;
+
+    &-link {
+      color: $color-thunder;
+    }
+  }
+
+  &__content-img {
+    margin: 20px;
+    padding: 20px 10px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,63 @@
+.contact {
+  &__title {
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  &__info {
+    color: $color-thunder;
+    padding: 20px;
+    border: 2px solid $color-thunder;
+    border-radius: 10px;
+    border-left: 5px solid;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include respond-to(tablet-portrait) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+
+  &__socials {
+    margin: 20px;
+  }
+
+  &__info-btn {
+    background: $color-pink;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+
+    &-link {
+      color: $color-thunder;
+    }
+
+    &:hover {
+      background: $color-azalea;
+      transition: all .2s linear;
+    }
+  }
+
+  &__socials-img {
+    filter: grayscale(100%);
+    transition: all .2s;
+    object-fit: contain;
+    height: 40px;
+    display: inline;
+
+    &:hover {
+      transform: scale(1.5);
+      filter: none;
+    }
+
+    @include respond-to(tablet-portrait) {
+      height: 60px;
+    }
+  }
+}
